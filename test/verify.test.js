@@ -36,29 +36,16 @@ afterEach(async () => {
   await browser.close();
 });
 
-describe("the webpage", () => {
-  it("should have a header element", async () => {
-    const element = await page.$("header");
-    expect(element).not.toBeNull();
-  });
-
-  it("should have a navigation element", async () => {
-    const element = await page.$("nav");
-    expect(element).not.toBeNull();
-  });
-
-  it("should have a article element", async () => {
-    const element = await page.$("article");
-    expect(element).not.toBeNull();
-  });
-
-  it("should have a section element", async () => {
-    const element = await page.$("section");
-    expect(element).not.toBeNull();
-  });
-
-  it("should have a footer element", async () => {
-    const element = await page.$("footer");
-    expect(element).not.toBeNull();
+describe('the webpage', () => {
+  it('should display an icon in the tab', async () => {
+      const type = await page.$eval('head > link[rel="icon"]', (link) => {
+        return link.getAttribute("type");
+      });
+      expect(type).toBe("image/x-icon");
+      
+      const href = await page.$eval('head > link[rel="icon"]', (link) => {
+        return link.getAttribute("href");
+      });
+      expect(href).toBe("https://images.squarespace-cdn.com/content/v1/61ddf7cb7f28032633f8dcef/65d5b3fb-ce52-45c6-a2c2-fba008a51af3/favicon.ico?format=100w");
   });
 });
