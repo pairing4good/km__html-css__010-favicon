@@ -1,3 +1,7 @@
+# 010 Favicon
+
+[![010 Favicon](https://img.youtube.com/vi/at3OLf1Zij8/0.jpg)](https://www.youtube.com/watch?v=at3OLf1Zij8)
+
 The `index.html` file
 - should display an icon in the tab that points to https://images.squarespace-cdn.com/content/v1/61ddf7cb7f28032633f8dcef/65d5b3fb-ce52-45c6-a2c2-fba008a51af3/favicon.ico?format=100w
 
